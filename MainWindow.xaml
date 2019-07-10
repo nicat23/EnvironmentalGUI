@@ -5,48 +5,88 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EnvironmentalGUI"
         mc:Ignorable="d"
-        Title="Environmental GUI" Height="420" Width="750" ResizeMode="CanResize">
+        Title="Environmental GUI" Height="720" Width="1000" ResizeMode="CanResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="6.5*"/>
+            <ColumnDefinition Width="3.5*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
-            <RowDefinition Height="5*" />
-            <RowDefinition Height="5*" />
+            <RowDefinition />
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TabControl x:Name="tabControl" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2">
-                <TabItem x:Name="tabFirstFloor" Header="First Floor">
+        <TabControl x:Name="tabControl" Grid.Column="1" Grid.Row="1">
+            <TabItem x:Name="tabFirstFloor" Header="First Floor">
                 <Grid Background="#FF0B4A80">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="20"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="20"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="20"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="20"/>
-                        </Grid.RowDefinitions>
-                    </Grid>
-                </TabItem>
-                <TabItem x:Name="tabSecondFloor" Header="Second Floor" IsEnabled="True">
-                    <Grid Background="#FF0B4A80"/>
-                </TabItem>
-                <TabItem x:Name="tabThirdFloor" Header="Third Floor" IsEnabled="True"></TabItem>
-            <Grid Background="#FF0B4A80"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabSecondFloor" Header="Second Floor" IsEnabled="True">
+                <Grid Background="#FF0B4A80"/>
+            </TabItem>
+            <TabItem x:Name="tabThirdFloor" Header="Third Floor" IsEnabled="True">
+                <Grid Background="#FF0B4A80"/>
+            </TabItem>
         </TabControl>
-        <Frame Grid.Column="2" Grid.Row="1" x:Name="PCInfoFrame" NavigationUIVisibility="Hidden"/>
-        <Frame Grid.Column="2" Grid.Row="2" x:Name="PCInfoFrameLower" NavigationUIVisibility="Hidden"/>
+        <Grid x:Name="gridPCInformation" Grid.Column="2" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="5"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="5"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Grid.Row="1" Content="Cube:"/>
+            <Label Grid.Column="1" Grid.Row="2" Content="PC Name:"/>
+            <Label Grid.Column="1" Grid.Row="3" Content="Extension:"/>
+            <Label Grid.Column="1" Grid.Row="4" Content="Phone Mac:"/>
+            <Label Grid.Column="1" Grid.Row="5" Content="PC Config:"/>
+            <Label Grid.Column="3" Grid.Row="1" Content="CPUID:"/>
+            <Label Grid.Column="3" Grid.Row="2" Content="Last User:"/>
+            <Label Grid.Column="3" Grid.Row="3" Content="Uptime:"/>
+            <Label Grid.Column="3" Grid.Row="4" Content="Nice Config:"/>
+            <Label Grid.Column="3" Grid.Row="5" Content="Online:"/>
+            <Label Grid.Column="1" Grid.Row="8" Content="Profile List:" Grid.ColumnSpan="2"/>
+            <DataGrid Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="3" Grid.RowSpan="6" x:Name="dataProfileList"/>
+        </Grid>
     </Grid>
 </Window>
