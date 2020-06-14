@@ -21,25 +21,15 @@
         <TabControl x:Name="tabControl" Grid.Column="1" Grid.Row="1">
             <TabItem x:Name="tabFirstFloor" Header="First Floor">
                 <Grid Background="#FF0B4A80">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="20"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="20"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="20"/>
-                    </Grid.RowDefinitions>
+                    <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="#FF0B4A80">
+                        <Button x:Name="button1" Content="Button" Margin="1"/>
+                        <Button x:Name="button2" Content="Button" Margin="1"/>
+                        <Button x:Name="button3" Content="Button" Margin="1"/>
+                        <Button x:Name="button4" Content="Button" Margin="1"/>
+                    </WrapPanel>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabSecondFloor" Header="Second Floor" IsEnabled="True">
+                <TabItem x:Name="tabSecondFloor" Header="Second Floor" IsEnabled="True">
                 <Grid Background="#FF0B4A80"/>
             </TabItem>
             <TabItem x:Name="tabThirdFloor" Header="Third Floor" IsEnabled="True">
